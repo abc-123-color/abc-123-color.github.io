@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-04T12:04:15.493Z</updated>
+  <updated>2020-04-04T12:04:49.324Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2020/04/04/%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80/"/>
     <id>http://yoursite.com/2020/04/04/%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80/</id>
     <published>2020-04-04T11:32:21.000Z</published>
-    <updated>2020-04-04T12:04:15.493Z</updated>
+    <updated>2020-04-04T12:04:49.324Z</updated>
     
     <content type="html"><![CDATA[<a id="more"></a><p><img src="/img/3.webp" alt="alt 图片"></p><h1 id="requests库请求"><a href="#requests库请求" class="headerlink" title="requests库请求"></a>requests库请求</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">get请求a=requests.get(<span class="string">'http://127.0.0.1'</span>)</span><br><span class="line">post请求a=requests.post(<span class="string">'https://127.0.0.1'</span>,data=&#123;<span class="string">'key'</span>:<span class="string">'vaule'</span>&#125;)</span><br></pre></td></tr></table></figure><h3 id="请求头伪装"><a href="#请求头伪装" class="headerlink" title="请求头伪装"></a>请求头伪装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">headers=&#123;<span class="string">'user-agent'</span>:<span class="string">'xxxxx'</span>&#125;</span><br><span class="line">a=requests.get(url,headers=headers)</span><br></pre></td></tr></table></figure><h3 id="BeautifulSoup"><a href="#BeautifulSoup" class="headerlink" title="BeautifulSoup"></a>BeautifulSoup</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a=BeautifulSoup(html,<span class="string">'lxml'</span>)</span><br><span class="line">获取标题内容:a.soup.title.string</span><br><span class="line">获取a标签的内容:a.p.string</span><br><span class="line">获取所有a标签：a.find_all(<span class="string">'a'</span>)</span><br><span class="line">获取id为xxx的标签：a.find(id=<span class="string">"xxx"</span>)</span><br></pre></td></tr></table></figure><h3 id="BeautifulSoup-1"><a href="#BeautifulSoup-1" class="headerlink" title="BeautifulSoup"></a>BeautifulSoup</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>###<br>###<br>###<br>###<br>###<br>###<br>###</p>]]></content>
     
