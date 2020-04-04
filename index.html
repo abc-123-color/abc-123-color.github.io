@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>老王的博客</title>
+  <title>老王</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="老王的博客">
+<meta property="og:title" content="老王">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="老王的博客">
+<meta property="og:site_name" content="老王">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="老王的博客" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="老王" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -152,6 +152,75 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-爬虫基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/04/%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80/">py爬虫入门知识</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/04/%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80/" class="archive-article-date">
+  	<time datetime="2020-04-04T11:32:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <a id="more"></a>
+<p><img src="/img/3.webp" alt="alt 图片"></p>
+<h1 id="requests库请求"><a href="#requests库请求" class="headerlink" title="requests库请求"></a>requests库请求</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">get请求a=requests.get(<span class="string">'http://127.0.0.1'</span>)</span><br><span class="line">post请求a=requests.post(<span class="string">'https://127.0.0.1'</span>,data=&#123;<span class="string">'key'</span>:<span class="string">'vaule'</span>&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="请求头伪装"><a href="#请求头伪装" class="headerlink" title="请求头伪装"></a>请求头伪装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">headers=&#123;<span class="string">'user-agent'</span>:<span class="string">'xxxxx'</span>&#125;</span><br><span class="line">a=requests.get(url,headers=headers)</span><br></pre></td></tr></table></figure>
+<h3 id="BeautifulSoup"><a href="#BeautifulSoup" class="headerlink" title="BeautifulSoup"></a>BeautifulSoup</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a=BeautifulSoup(html,<span class="string">'lxml'</span>)</span><br><span class="line">获取标题内容:a.soup.title.string</span><br><span class="line">获取a标签的内容:a.p.string</span><br><span class="line">获取所有a标签：a.find_all(<span class="string">'a'</span>)</span><br><span class="line">获取id为xxx的标签：a.find(id=<span class="string">"xxx"</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="BeautifulSoup-1"><a href="#BeautifulSoup-1" class="headerlink" title="BeautifulSoup"></a>BeautifulSoup</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>###<br>###<br>###<br>###<br>###<br>###<br>###</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/04/%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -173,19 +242,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br><img src="/img/1.jpg" alt="alt 图片"></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2>
+        
+          <a class="article-more-a" href="/2020/03/30/hello-world/#more">more >></a>
+        
       
 
       
