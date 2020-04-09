@@ -6,21 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>py爬虫入门知识 | 老王</title>
+  <title>py web spider | blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="article">
-<meta property="og:title" content="py爬虫入门知识">
+<meta property="og:title" content="py web spider">
 <meta property="og:url" content="http://yoursite.com/2020/04/04/%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80/index.html">
-<meta property="og:site_name" content="老王">
+<meta property="og:site_name" content="blog">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/img/3.jpg">
 <meta property="article:published_time" content="2020-04-04T11:32:21.000Z">
-<meta property="article:modified_time" content="2020-04-04T14:35:54.760Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2020-04-09T08:23:23.794Z">
+<meta property="article:author" content="隐身">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/img/3.jpg">
   
-    <link rel="alternative" href="/atom.xml" title="老王" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -50,7 +50,7 @@
 			<img src="/img/2.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		  <h1 class="header-author"><a href="/">隐身</a></h1>
 		</hgroup>
 		
 
@@ -108,7 +108,7 @@
 				<img src="/img/2.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">John Doe</h1>
+			  <h1 class="header-author js-header-author">隐身</h1>
 			</hgroup>
 			
 			
@@ -161,7 +161,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      py爬虫入门知识
+      py web spider
     </h1>
   
 
@@ -184,7 +184,10 @@
 <h3 id="multiprocessing"><a href="#multiprocessing" class="headerlink" title="multiprocessing"></a>multiprocessing</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">multiprocessing下有个dummy模块下有个pool类</span><br><span class="line">from multiprocessing.dummy import Pool</span><br><span class="line">def qu(url):</span><br><span class="line">	requests.get(url)</span><br><span class="line">url=[]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(100):</span><br><span class="line">	url.appned(<span class="string">"http://127.0.0.1"</span>)</span><br><span class="line">pool=pool(5)</span><br><span class="line">pool.map(qu,url)</span><br><span class="line">map()<span class="comment">#方法接受两个参数 第一个是函数名字 2是迭代对象</span></span><br></pre></td></tr></table></figure>
 <h3 id="redis"><a href="#redis" class="headerlink" title="redis"></a>redis</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">pip install redis</span><br><span class="line">import redis</span><br><span class="line">c=redis.StrictRedis(host=<span class="string">'127.0.0.1'</span>,port=2739,password=<span class="string">'12345'</span>)<span class="comment">#连接redis</span></span><br><span class="line">c.lpush(<span class="string">'chapter_6'</span>,123)<span class="comment">#把123放到chapter_6列表的左侧</span></span><br><span class="line">v=c.lpop(<span class="string">'chapter_6'</span>)<span class="comment">#在列表左侧读取一个值</span></span><br><span class="line">c.sadd(<span class="string">'test'</span>,<span class="string">'www.baidu.com'</span>)<span class="comment">#往集合添加一个网址</span></span><br><span class="line">url=c.spop(<span class="string">'url'</span>)<span class="comment">#从集合读取一个值</span></span><br><span class="line">length=c.scard(<span class="string">'url'</span>)<span class="comment">#查看集合长度</span></span><br></pre></td></tr></table></figure>
 
-<p>###<br>###<br>###<br>###<br>###<br>###</p>
+
+<p>###</p>
+<pre><code class="bash"></code></pre>
+<p>###<br>###<br>###<br>###<br>###</p>
 
       
 
@@ -198,7 +201,7 @@
             <span class="tooltip-content">
               <span class="tooltip-text">
                 <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>You must try things that may not work<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
                     
                     
@@ -278,9 +281,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2020/04/09/docker/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          docker
+        
+      </div>
+    </a>
+  
   
     <a href="/2020/03/30/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">卑微小王</div>
+      <div class="article-nav-title">Get up keep moving</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -323,7 +335,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 John Doe
+    		&copy; 2020 隐身
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
