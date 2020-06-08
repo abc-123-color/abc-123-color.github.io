@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="docker, blog">
+    <meta name="keywords" content="sql, blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>docker | blog</title>
+    <title>sql | blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">docker</h1>
+                    <h1 class="description center-align post-title">sql</h1>
                 </div>
             </div>
         </div>
@@ -451,7 +451,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-04-09
+                    2020-04-05
                 </div>
                 
 
@@ -467,17 +467,12 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="docker-常用命令"><a href="#docker-常用命令" class="headerlink" title="docker 常用命令"></a>docker 常用命令</h1><a id="more"></a>
+                <h3 id=""><a href="#" class="headerlink" title=""></a></h3><p>查看支持的引擎 SHOW ENGINES;<br>建立表:create table table(id int auto_increment primary key,user varchar(10) not null);<br>查看表结构: show columns； || DESCRIBE table_name 列名 ;<br>修改表结构：alter table 数据表名 alter_spec[xx]<br>添加字段 ：alter table name add columns varchar(5) not nuull;<br>修改表名：alter table name rename as new_name;</p>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><p>！=|《》<br>is null is | is not null | in | not in | like | not like<br>x between a and b  判断数据是否在某个访问内 是返回1否返回0；<br>x in (1,2,3……) 判断x是否在里面<br>x regexp ‘匹配方式’ 正则匹配是否包含</p>
+<h3 id="操作表"><a href="#操作表" class="headerlink" title="操作表"></a>操作表</h3><p>插入数据：insert into name values(‘’); || insert ……set<br>更新数据：update table set xx=’xx’;<br>删除数据：delete from name where user=’xx’;<br>删除所有数据:truncate table name;</p>
+<h3 id="数据查询"><a href="#数据查询" class="headerlink" title="数据查询"></a>数据查询</h3><p>limit 限定<br>多表查询用,号分隔<br>聚合函数<br>distinct 去重<br>order by  字段名 【ASC|DESF】升序/降序<br>group by xxx 对结果分组<br>exists 内层查询不返回 而是一个真假值<br>any 只要满足内层的一个<br>all 要内层全部满足 才能执行外层函数<br>union 合并查询结果<br>truncate(x,y)x保留到小数点后y位</p>
+<h3 id="数据备份"><a href="#数据备份" class="headerlink" title="数据备份"></a>数据备份</h3><p>mysqldump -uroot -p test&gt;d://xx.sql<br>mysqldump可以备份一个，多个数据库 备份所有数据库<br>数据还原 mysql -uroot -p [dbname] &lt; xx.sql</p>
 
-<p>service docker restart #重启docker</p>
-<p> docker images 列出本地镜像</p>
-<ul>
-<li>-q只显示镜像id，-a列出本地所有镜像 –digests显示镜像的摘要信息 –no-trunc显示完整信息<br>docker run 创建一个新的容器并运行</li>
-<li>-it交互式运行  -d后台运行并返回id -p指定端口映射<br>docker search crntos -s 30 列出点赞数超过30的指定镜像<br>docker start 启动一个或者多个停止的容器<br>docker stop停止容器<br>docker rm删除一个或者多个容器 -f<br>docker kill杀死一个容器<br>docker exec在运行的容器中执行命令 -d -i -t<br>docker pull 拉取镜像<br>docker build 创建镜像</li>
-<li>-f指定dockerfile路径 –pull 更新镜像 –network指定run的网络<br>docker commit将容器固化成一个新的镜像<br>docker ps -q -a<br>docker rename 重命名<br>docker cp容器主机之间的数据拷贝</li>
-</ul>
-<h1 id="dockerfile"><a href="#dockerfile" class="headerlink" title="dockerfile"></a>dockerfile</h1><p>docker build -t dockerfile –network=host -t name .<br>docker run -tid –name test –privileged=true ubuntu:18.04 /sbin/init<br>docker exec -it test /bin/bash</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">FROM 基础镜像 当前新镜像是基于那个镜像</span><br><span class="line">MAINTAINER 镜像维护者的姓名和邮箱</span><br><span class="line">RUN 容器构建时需要运行的命令</span><br><span class="line">EXPOSE 当前容器对外暴露的端口</span><br><span class="line">WORKDIR 指定创建的容器后 终端默认登录进来的工作目录</span><br><span class="line">ENV用来构建镜像过程设置环境变量</span><br><span class="line">ADD在宿主机目录下的文件拷贝进镜像且add命令自动处理url和解压tar压缩包</span><br><span class="line">COPY 源路径的文件、目录复制到新的一层镜像内&lt;目录路径&gt;</span><br><span class="line">VOLUME容器数据卷 用于数据保存和持久化工作</span><br><span class="line">CMD指定一个容器启动时要运行的命令 可以有多个但只有最后一个生效</span><br><span class="line">ENTRYPOINT指定一个容器启动时要运行的命令</span><br><span class="line">ONBUILD当构建一个被继承的dockerfile时运行命令 父镜像咋子被子继承后父镜像的onbuild被触发</span><br></pre></td></tr></table></figure>
             </div>
             <hr/>
 
@@ -502,7 +497,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/04/09/docker/">http://yoursite.com/2020/04/09/docker/</a>
+                    <a href="http://yoursite.com/2020/04/05/sql/">http://yoursite.com/2020/04/05/sql/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -709,26 +704,29 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/04/16/c%E8%AF%AD%E8%A8%80/">
+                <a href="/2020/04/09/docker/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="c语言基础">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="docker">
                         
-                        <span class="card-title">c语言基础</span>
+                        <span class="card-title">docker</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            数据类型
-1234int x,z,y 定义为基本整形long x,z,t 定义为长整形float单精度 double双精度  long double 长双精度char字符变量 一般占用1字节内存
-赋值与类型转换123456789101112
+                            docker 常用命令
+
+service docker restart #重启docker
+ docker images 列出本地镜像
+
+-q只显示镜像id，-a列出本地所有镜像 –digests显示镜像的摘要信息 –no-trunc显示完
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-16
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-09
                         </span>
                         <span class="publish-author">
                             
@@ -748,24 +746,25 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/04/05/sql/">
+                <a href="/2020/04/04/%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="sql">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="py web spider">
                         
-                        <span class="card-title">sql</span>
+                        <span class="card-title">py web spider</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            查看支持的引擎 SHOW ENGINES;建立表:create table table(id int auto_increment primary key,user varchar(10) not null);查看表结构: show col
+                            requests库请求
+12get请求a=requests.get('http://127.0.0.1')post请求a=requests.post('https://127.0.0.1',data=&#123;'key':'vaule'&
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-04
                             </span>
                         <span class="publish-author">
                             
