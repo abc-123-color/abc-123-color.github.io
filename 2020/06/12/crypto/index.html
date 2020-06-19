@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="django, blog">
+    <meta name="keywords" content="crypto, blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>django | blog</title>
+    <title>crypto | blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">django</h1>
+                    <h1 class="description center-align post-title">crypto</h1>
                 </div>
             </div>
         </div>
@@ -447,8 +447,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/python/" class="post-category">
-                                python
+                            <a href="/categories/%E5%AE%89%E5%85%A8/" class="post-category">
+                                安全
                             </a>
                         
                     </div>
@@ -460,7 +460,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-05-26
+                    2020-06-12
                 </div>
                 
 
@@ -476,14 +476,14 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>目录结构<br>    init.py：是一个python的包<br>    settings.py：项目的配置文件<br>    urls.py：路由配置文件<br>    wsgi.py：web服务器和Django交互入口<br>    manage.py:项目的管理文件<br>    ```bash</p>
-<h2 id="django-创建命令-python-manage-py-startapp-app-name"><a href="#django-创建命令-python-manage-py-startapp-app-name" class="headerlink" title="django 创建命令 python manage.py startapp app-name"></a>django 创建命令 python manage.py startapp app-name</h2><pre><code>init.py：python模块 
-migrations：储存模型类迁移文件 
-admin.py：后台管理文件 
-models.py：和数据库交互模块 
-tests.py：测试代码文件 
-views.py：接受请求，处理，与M和T进行交互，返回应答，定义处理视图函数。</code></pre><p>修改 setting.py中的INSTALLED_APPS配置项，加上刚刚创建的应用程序</p>
-<h2 id="启动程序：python-manage-py-runserver"><a href="#启动程序：python-manage-py-runserver" class="headerlink" title="启动程序：python manage.py runserver"></a>启动程序：python manage.py runserver</h2><h2 id="定义模型类，需要继承models-Model类"><a href="#定义模型类，需要继承models-Model类" class="headerlink" title="定义模型类，需要继承models.Model类"></a>定义模型类，需要继承models.Model类</h2><pre><code class="bash">from django.db import models</code></pre>
+                <p>主流的加密方式</p>
+<h1 id="古典密码"><a href="#古典密码" class="headerlink" title="古典密码"></a>古典密码</h1><h3 id="代换密码"><a href="#代换密码" class="headerlink" title="代换密码"></a>代换密码</h3><p>1单表替换密码 2多密码替代密码 3多字母表替代密码 4多表替代密码等</p>
+<h3 id="置换位移法"><a href="#置换位移法" class="headerlink" title="置换位移法"></a>置换位移法</h3><p>1列置换   2周期置换等</p>
+<h1 id="现代密码"><a href="#现代密码" class="headerlink" title="现代密码"></a>现代密码</h1><p>1对称密码 2非对称密码 3hash函数 4数字签名</p>
+<h1 id="古典密码-1"><a href="#古典密码-1" class="headerlink" title="古典密码"></a>古典密码</h1><h3 id="古典密码编码方法归结为主要的两种-即是置换和代换"><a href="#古典密码编码方法归结为主要的两种-即是置换和代换" class="headerlink" title="古典密码编码方法归结为主要的两种 即是置换和代换"></a>古典密码编码方法归结为主要的两种 即是置换和代换</h3><p>置换： 把字母重新排列 字母身不变其他位置变了 </p>
+<h2 id="代换：-将密码代替成其他字符"><a href="#代换：-将密码代替成其他字符" class="headerlink" title="代换： 将密码代替成其他字符"></a>代换： 将密码代替成其他字符</h2><p>多表替代密码 从明文字母到密文字母通过多个映射来隐藏字母出现的频率分布<br>代表有 维吉尼亚密码（26个凯撒密码合并成一个表）</p>
+<h2 id="置换"><a href="#置换" class="headerlink" title="置换"></a>置换</h2><p>代表 栅栏密码（简单的移动字符位置的加密方法）</p>
+<h1 id="现代密码-1"><a href="#现代密码-1" class="headerlink" title="现代密码"></a>现代密码</h1><p>对称加密（加密和解密使用同一密钥）</p>
 
             </div>
             <hr/>
@@ -509,7 +509,7 @@ views.py：接受请求，处理，与M和T进行交互，返回应答，定义�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/05/26/django/">http://yoursite.com/2020/05/26/django/</a>
+                    <a href="http://yoursite.com/2020/06/12/crypto/">http://yoursite.com/2020/06/12/crypto/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -716,37 +716,29 @@ views.py：接受请求，处理，与M和T进行交互，返回应答，定义�
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/06/12/crypto/">
+                <a href="/2020/06/16/nmap/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="crypto">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="nmap">
                         
-                        <span class="card-title">crypto</span>
+                        <span class="card-title">nmap</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            主流的加密方式
-古典密码代换密码1单表替换密码 2多密码替代密码 3多字母表替代密码 4多表替代密码等
-置换位移法1列置换   2周期置换等
-现代密码1对称密码 2非对称密码 3hash函数 4数字签名
-古典密码古典密码编码方法归结为主要的
+                            常用方法扫描单个地址  nmap 192.168.0.1扫描多个目标地址 nmap 192.168.9.1 192.168.9.100扫描指定范围 nmap 192.168.9.1-100扫描目标地址所在某个网段 nmap 192.168.
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-12
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-16
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%AE%89%E5%85%A8/" class="post-category">
-                                    安全
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            隐身
                             
                         </span>
                     </div>
@@ -761,31 +753,33 @@ views.py：接受请求，处理，与M和T进行交互，返回应答，定义�
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/25/php/">
+                <a href="/2020/05/26/django/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="php">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="django">
                         
-                        <span class="card-title">php</span>
+                        <span class="card-title">django</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            PDO扩展的使用使用PDO连接数据库需要先实例化PDO
-$DBMS='mysql';$host='localhost';$port='3306';$dname='name';
-$dsn="$DBMS：host=$host;port=$por
+                            目录结构    init.py：是一个python的包    settings.py：项目的配置文件    urls.py：路由配置文件    wsgi.py：web服务器和Django交互入口    manage.py:项目的管理文件  
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-26
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            隐身
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/python/" class="post-category">
+                                    python
+                                </a>
+                            
                             
                         </span>
                     </div>

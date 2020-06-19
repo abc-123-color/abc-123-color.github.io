@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="django, blog">
+    <meta name="keywords" content="sqlmap, blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>django | blog</title>
+    <title>sqlmap | blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">django</h1>
+                    <h1 class="description center-align post-title">sqlmap</h1>
                 </div>
             </div>
         </div>
@@ -444,15 +444,6 @@
                 </div>
                 <div class="col s5 right-align">
                     
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/python/" class="post-category">
-                                python
-                            </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
 
@@ -460,7 +451,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-05-26
+                    2020-06-16
                 </div>
                 
 
@@ -476,14 +467,10 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>目录结构<br>    init.py：是一个python的包<br>    settings.py：项目的配置文件<br>    urls.py：路由配置文件<br>    wsgi.py：web服务器和Django交互入口<br>    manage.py:项目的管理文件<br>    ```bash</p>
-<h2 id="django-创建命令-python-manage-py-startapp-app-name"><a href="#django-创建命令-python-manage-py-startapp-app-name" class="headerlink" title="django 创建命令 python manage.py startapp app-name"></a>django 创建命令 python manage.py startapp app-name</h2><pre><code>init.py：python模块 
-migrations：储存模型类迁移文件 
-admin.py：后台管理文件 
-models.py：和数据库交互模块 
-tests.py：测试代码文件 
-views.py：接受请求，处理，与M和T进行交互，返回应答，定义处理视图函数。</code></pre><p>修改 setting.py中的INSTALLED_APPS配置项，加上刚刚创建的应用程序</p>
-<h2 id="启动程序：python-manage-py-runserver"><a href="#启动程序：python-manage-py-runserver" class="headerlink" title="启动程序：python manage.py runserver"></a>启动程序：python manage.py runserver</h2><h2 id="定义模型类，需要继承models-Model类"><a href="#定义模型类，需要继承models-Model类" class="headerlink" title="定义模型类，需要继承models.Model类"></a>定义模型类，需要继承models.Model类</h2><pre><code class="bash">from django.db import models</code></pre>
+                <h1 id="sqlmap入门"><a href="#sqlmap入门" class="headerlink" title="sqlmap入门"></a>sqlmap入门</h1><p>判断是否存在注入：sqlmap.py -u <a href="http://127.0.0.1……（当注入参数大大于2">http://127.0.0.1……（当注入参数大大于2</a> 式需要加双引号）<br>从文件中加载http参数：sqlmap.py -r desktop/1.txt sqlmap.py -r desktop/1.txt<br>查询当前用户所有数据库 sqlmap.py -u <a href="http://127.0.0.1" target="_blank" rel="noopener">http://127.0.0.1</a> –dbs<br>获取数据库的表名 sqlmap.py -u http:// -D dkeye –tables (-d指定数据库)<br>查询表中字段名字 sqlmap.py -u <a href="http://127.0.0.1" target="_blank" rel="noopener">http://127.0.0.1</a> -D XX -T XX –columns （columns可以写成-c）<br>查询数据库中所有用户 sqlmap.py -u “<a href="http://127.0.0.1&quot;" target="_blank" rel="noopener">http://127.0.0.1&quot;</a> –users<br>查询数据库中用户密码 sqlmap.py -u “<a href="http://127.0.0.1&quot;" target="_blank" rel="noopener">http://127.0.0.1&quot;</a> –password</p>
+<h1 id="sqlmap参数"><a href="#sqlmap参数" class="headerlink" title="sqlmap参数"></a>sqlmap参数</h1><p>–level 5 指定需要测试的等级 一共5个等级 等级2时候测试coookie 等级3测试http头<br>–is-dba 查看当前用户是否为管理员用户<br>–roles: 列出管理员角色<br>–referer 伪造http referer头<br>–os-cmd,–os-shell 运行任意操作系统命令<br>–file-read 从数据库中读取文件<br>–file-write –file-dest 上传文件到数据库服务器中<br>–identify-waf 测试网站WAF</p>
+<h1 id="sql自带tamper脚本"><a href="#sql自带tamper脚本" class="headerlink" title="sql自带tamper脚本"></a>sql自带tamper脚本</h1><p>sqlmap.py xxxxxxx –tamper “模块名”<br>apostrophemask.py        作用：将引号替换成utf8 用于过滤单引号<br>base64encode.py        作用：base64编码<br>multiplespaces.py      作用： 围绕sql关键字加多个空格<br>space2plus.py         作用：用+号替代空格<br>nonrecursivereplacement.py 作用：双写绕过waf<br>space2randomblank.py 作用：将空格替换成其他有效字符<br>unionalltounion.py    作用：union all select 替换成 union select<br>securesphere.py       作用：追加特定的字符串<br>space2hash.py         作用：将空格替换成#号<br>space2mssqlblank.py(mysql)将空格替换成其他符号<br>space2mssqlhash.py         作用：将空格替换成#号<br>between.py                     作用：替换&gt;号<br>percentage.py                 asp允许每个字符前加%号<br>sp_password.py              作用：从DBMS日志自动模糊处理有效的载荷中追加password<br>charencode.py                作用：给payload全部字符使用url编码<br>randomcase.py                 作用：随机大小写<br>charunicodeencode.py         作用：字符串unicode编码<br>spac2comment.py                 作用：将空格替换成/**/<br>equaltolike.py                  作用：将等号替换成like<br>greatest.py                     作用：对&gt;号进行绕过<br>ifnull2ifisnull.py                 作用：绕过对IFUNLL的过滤<br>modsecurityversioned.py           作用：过滤空格 使用内联注释<br>space2mysqlblank.py             作用：将空格替换成其他空白符合适合mysql<br>modsecurityzeroversioned.py      作用：使用mysql内联注释进行注入<br>space2mysqldash.py                 作用：将空格替换成– 并添加一个换行符 </p>
+<p>bluecoat.py                      作用：在有效的随机空白符替换成空格符<br>versionedkeywords.py              作用： 注入绕过<br>halfversionedmorekeywords.py      作用：当数据库为mysql时绕过防火墙<br>space2morehash.py                    作用：将空格代替成引号，并添加一个随机的字符串<br>apostrophenullencode.py            作用：使用非法双字节unicode字符替代单引号<br>appendnullbyte.py                    有效载荷的结束位置加载零字节字符编码<br>chardoubleencode.py                 作用：对给定的payload全部字符使用双重编码<br>unmagicquotes.py                     作用：用多字节组合（%bf%27）和末尾通用注释一起替换空格<br>randomcomments.py                    作用：用/**/分割关键字</p>
 
             </div>
             <hr/>
@@ -509,7 +496,7 @@ views.py：接受请求，处理，与M和T进行交互，返回应答，定义�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/05/26/django/">http://yoursite.com/2020/05/26/django/</a>
+                    <a href="http://yoursite.com/2020/06/16/sqlmap/">http://yoursite.com/2020/06/16/sqlmap/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -712,45 +699,39 @@ views.py：接受请求，处理，与M和T进行交互，返回应答，定义�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2020/06/12/crypto/">
+                <a href="/2020/06/16/sqlmap/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="crypto">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="sqlmap">
                         
-                        <span class="card-title">crypto</span>
+                        <span class="card-title">sqlmap</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            主流的加密方式
-古典密码代换密码1单表替换密码 2多密码替代密码 3多字母表替代密码 4多表替代密码等
-置换位移法1列置换   2周期置换等
-现代密码1对称密码 2非对称密码 3hash函数 4数字签名
-古典密码古典密码编码方法归结为主要的
+                            sqlmap入门判断是否存在注入：sqlmap.py -u http://127.0.0.1……（当注入参数大大于2 式需要加双引号）从文件中加载http参数：sqlmap.py -r desktop/1.txt sqlmap.py -r 
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-16
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%AE%89%E5%85%A8/" class="post-category">
-                                    安全
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            隐身
                             
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -761,26 +742,24 @@ views.py：接受请求，处理，与M和T进行交互，返回应答，定义�
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/25/php/">
+                <a href="/2020/06/16/nmap/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="php">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="nmap">
                         
-                        <span class="card-title">php</span>
+                        <span class="card-title">nmap</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            PDO扩展的使用使用PDO连接数据库需要先实例化PDO
-$DBMS='mysql';$host='localhost';$port='3306';$dname='name';
-$dsn="$DBMS：host=$host;port=$por
+                            常用方法扫描单个地址  nmap 192.168.0.1扫描多个目标地址 nmap 192.168.9.1 192.168.9.100扫描指定范围 nmap 192.168.9.1-100扫描目标地址所在某个网段 nmap 192.168.
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-16
                             </span>
                         <span class="publish-author">
                             

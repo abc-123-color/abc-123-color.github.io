@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="django, blog">
+    <meta name="keywords" content="nmap, blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>django | blog</title>
+    <title>nmap | blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">django</h1>
+                    <h1 class="description center-align post-title">nmap</h1>
                 </div>
             </div>
         </div>
@@ -444,15 +444,6 @@
                 </div>
                 <div class="col s5 right-align">
                     
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/python/" class="post-category">
-                                python
-                            </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
 
@@ -460,7 +451,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-05-26
+                    2020-06-16
                 </div>
                 
 
@@ -476,14 +467,9 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>目录结构<br>    init.py：是一个python的包<br>    settings.py：项目的配置文件<br>    urls.py：路由配置文件<br>    wsgi.py：web服务器和Django交互入口<br>    manage.py:项目的管理文件<br>    ```bash</p>
-<h2 id="django-创建命令-python-manage-py-startapp-app-name"><a href="#django-创建命令-python-manage-py-startapp-app-name" class="headerlink" title="django 创建命令 python manage.py startapp app-name"></a>django 创建命令 python manage.py startapp app-name</h2><pre><code>init.py：python模块 
-migrations：储存模型类迁移文件 
-admin.py：后台管理文件 
-models.py：和数据库交互模块 
-tests.py：测试代码文件 
-views.py：接受请求，处理，与M和T进行交互，返回应答，定义处理视图函数。</code></pre><p>修改 setting.py中的INSTALLED_APPS配置项，加上刚刚创建的应用程序</p>
-<h2 id="启动程序：python-manage-py-runserver"><a href="#启动程序：python-manage-py-runserver" class="headerlink" title="启动程序：python manage.py runserver"></a>启动程序：python manage.py runserver</h2><h2 id="定义模型类，需要继承models-Model类"><a href="#定义模型类，需要继承models-Model类" class="headerlink" title="定义模型类，需要继承models.Model类"></a>定义模型类，需要继承models.Model类</h2><pre><code class="bash">from django.db import models</code></pre>
+                <h1 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h1><p>扫描单个地址  nmap 192.168.0.1<br>扫描多个目标地址 nmap 192.168.9.1 192.168.9.100<br>扫描指定范围 nmap 192.168.9.1-100<br>扫描目标地址所在某个网段 nmap 192.168.1.100/24<br>导入文件扫描 nmap -iL xx.txt<br>指定端口扫描 nmap 192.168.1.100 -p 21,22,23,80<br>对目标地址进行路由跟踪 nmap –traceroute 192.168.1.100<br>识别操作系统 nmap -O 192.168.9.100<br>服务版本的识别 nmap -sV<br>探测防火墙状态 nmap -sF -T4 192.168.9.100<br>    open 开放 外部可以访问<br>    filtered 被过滤的<br>    closed 关闭的<br>    unfiltered 未被过滤的<br>    open/filtered 开放或被过滤的 不能识别</p>
+<p>脚本 –script<name>使用某个脚本进行扫描<br>鉴权扫描 nmap–script=auth 192.168.9.100<br>暴力破解 nmap –script=brute 192.168.9.100<br>扫描常见的漏洞 nmap –script=vuln 192.168.9.105<br>扫描服务 nmap –script=realvnc-auth-bypass 192.168.9.100<br>探测局域网内更多服务的开启 nmap -n -p 445 –script=broadcast 192.168.9.100<br>whois解析 nmap -script externalbaidu.com </p>
+<p>nmap相关参数<br>-iL 从文件导入目标主机或者目标网段<br>-iR 随机选择目标或者网段<br>–exclude 后面跟的主机或网段将不扫瞄<br>–excludefile 文件导入的……<br>–sL列举指定目标的ip 不进行主机发现<br>-sn 只进行主机发现 不进行端口扫描<br>-Pn 将所有主机视为已开启 跳过主机发现的过程</p>
 
             </div>
             <hr/>
@@ -509,7 +495,7 @@ views.py：接受请求，处理，与M和T进行交互，返回应答，定义�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/05/26/django/">http://yoursite.com/2020/05/26/django/</a>
+                    <a href="http://yoursite.com/2020/06/16/nmap/">http://yoursite.com/2020/06/16/nmap/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -716,6 +702,43 @@ views.py：接受请求，处理，与M和T进行交互，返回应答，定义�
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
+                <a href="/2020/06/16/sqlmap/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="sqlmap">
+                        
+                        <span class="card-title">sqlmap</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            sqlmap入门判断是否存在注入：sqlmap.py -u http://127.0.0.1……（当注入参数大大于2 式需要加双引号）从文件中加载http参数：sqlmap.py -r desktop/1.txt sqlmap.py -r 
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-16
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            隐身
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/2020/06/12/crypto/">
                     <div class="card-image">
                         
@@ -736,9 +759,9 @@ views.py：接受请求，处理，与M和T进行交互，返回应答，定义�
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -747,45 +770,6 @@ views.py：接受请求，处理，与M和T进行交互，返回应答，定义�
                                     安全
                                 </a>
                             
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/05/25/php/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="php">
-                        
-                        <span class="card-title">php</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            PDO扩展的使用使用PDO连接数据库需要先实例化PDO
-$DBMS='mysql';$host='localhost';$port='3306';$dname='name';
-$dsn="$DBMS：host=$host;port=$por
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-25
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            隐身
                             
                         </span>
                     </div>
