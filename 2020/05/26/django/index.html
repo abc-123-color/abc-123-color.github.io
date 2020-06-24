@@ -476,14 +476,24 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>目录结构<br>    init.py：是一个python的包<br>    settings.py：项目的配置文件<br>    urls.py：路由配置文件<br>    wsgi.py：web服务器和Django交互入口<br>    manage.py:项目的管理文件<br>    ```bash</p>
-<h2 id="django-创建命令-python-manage-py-startapp-app-name"><a href="#django-创建命令-python-manage-py-startapp-app-name" class="headerlink" title="django 创建命令 python manage.py startapp app-name"></a>django 创建命令 python manage.py startapp app-name</h2><pre><code>init.py：python模块 
+                <h1 id="python创建虚拟环境"><a href="#python创建虚拟环境" class="headerlink" title="python创建虚拟环境"></a>python创建虚拟环境</h1><pre><code>使用清华源安装：pip install virtualenv -i https://pypi.python.org/simple/
+cd到存虚拟环境的地址
+    virtualenv -p /usr/local/bin/python2.7 ENV2 参数 -p 指定python版本创建虚拟环境
+
+virtualenv --system-site-packages ENV 参数 --system-site-packages 指定创建虚拟环境时继承系统三方库
+4. 激活/退出虚拟环境
+source bin/activate 激活虚拟环境
+pip list 查看当前虚拟环境下所安装的第三方库
+deactivate 退出虚拟环境
+删除虚拟环境：直接删除虚拟环境所在目录即可</code></pre><p>目录结构<br>    init.py：是一个python的包<br>    settings.py：项目的配置文件<br>    urls.py：路由配置文件<br>    wsgi.py：web服务器和Django交互入口<br>    manage.py:项目的管理文件</p>
+<h2 id="启动django-python3-manage-py-runserver-8080"><a href="#启动django-python3-manage-py-runserver-8080" class="headerlink" title="启动django python3 manage.py runserver  8080"></a>启动django python3 manage.py runserver  8080</h2><pre><code>```bash</code></pre><h2 id="django-创建命令-python-manage-py-startapp-app-name"><a href="#django-创建命令-python-manage-py-startapp-app-name" class="headerlink" title="django 创建命令 python manage.py startapp app-name"></a>django 创建命令 python manage.py startapp app-name</h2><pre><code>init.py：python模块 
 migrations：储存模型类迁移文件 
 admin.py：后台管理文件 
 models.py：和数据库交互模块 
 tests.py：测试代码文件 
 views.py：接受请求，处理，与M和T进行交互，返回应答，定义处理视图函数。</code></pre><p>修改 setting.py中的INSTALLED_APPS配置项，加上刚刚创建的应用程序</p>
-<h2 id="启动程序：python-manage-py-runserver"><a href="#启动程序：python-manage-py-runserver" class="headerlink" title="启动程序：python manage.py runserver"></a>启动程序：python manage.py runserver</h2><h2 id="定义模型类，需要继承models-Model类"><a href="#定义模型类，需要继承models-Model类" class="headerlink" title="定义模型类，需要继承models.Model类"></a>定义模型类，需要继承models.Model类</h2><pre><code class="bash">from django.db import models</code></pre>
+<h2 id="启动程序：python-manage-py-runserver"><a href="#启动程序：python-manage-py-runserver" class="headerlink" title="启动程序：python manage.py runserver"></a>启动程序：python manage.py runserver</h2><p>URL配置（URLconf）就像Django所支撑网站的目录。它的本质是URL与要为该URL调用的视图函数之间的映射表<br>urlpatterns = [url(r’^admin/‘, admin.site.urls),]<br>视图会返回一个HttpResponse对象，其中包含生成的响应。每个视图函数都负责返回一个HttpResponse对象。</p>
+<h2 id="定义模型类，需要继承models-Model类"><a href="#定义模型类，需要继承models-Model类" class="headerlink" title="定义模型类，需要继承models.Model类"></a>定义模型类，需要继承models.Model类</h2><pre><code class="bash">from django.db import models</code></pre>
 
             </div>
             <hr/>

